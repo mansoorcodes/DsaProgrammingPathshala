@@ -1,0 +1,132 @@
+Given two points,
+p
+=
+(
+px
+,
+py
+)
+ and
+q
+=
+(
+q
+x
+,
+q
+y
+)
+. We consider reflection or image
+r
+=
+(
+r
+x
+,
+r
+y
+)
+, of point
+p
+ across point q to be a
+180
+o
+ rotation of point
+p
+ around
+q
+.
+
+Given points
+p
+ and
+q
+, find point
+r
+ and print two space-separated integers denoting the respective values of
+r
+x
+ and
+r
+y
+ on a new line.
+
+Input Format
+
+The first line of input contains 4 integers
+p
+x
+,
+p
+y
+,
+q
+x
+,
+q
+y
+Constraints
+
+−
+100
+
+≤
+
+p
+x
+,
+p
+y
+,
+q
+x
+,
+q
+y
+
+≤
+
+100
+Output Format
+
+Print the reflection or image point
+Sample Input 1
+0 0 1 1
+
+Sample Output 1
+2 2
+
+Explanation For case 1,
+p
+=
+(
+0
+,
+0
+)
+ and
+q
+=
+(
+1
+,
+1
+)
+ Therefore,
+r
+=
+(
+2
+,
+2
+)
+ 1476208076-15f0f71f16-find-point-0011.png (222×264)
+
+Example
+Input
+0 0 1 1
+Output
+2 2
+
+
+

@@ -1,0 +1,38 @@
+Arty is daydreaming in DSA class. He has a sheet of graph paper with
+n rows and
+m columns, and he imagines that there is an army base in each cell for a total of
+n
+∗
+m bases. He wants to drop supplies at strategic points on the sheet, marking each drop point with a red dot. If a base contains at least one package inside or on top of its border fence, then it is considered to be supplied.
+
+1479944215-79f12638a7-example-army-game.png (400×107)
+
+Given
+n and
+m, what is the minimum number of packages that Arty must drop to supply all of his bases?
+
+Input Format
+
+The first line contains integers
+n and m
+Constraints
+
+1≤n,m ≤
+
+1000
+Output Format
+
+Print the the minimum number of packages required
+Sample Input 1
+2 2
+
+Sample Output 1
+1
+
+Explanation Arty has four bases in a grid. If he drops a single package where the walls of all four bases intersect, then those four cells can access the package. 1479943282-a32d9bfad1-army-game.png (440×131) Because he managed to supply all four bases with a single supply drop, we print as our answer.
+
+Example
+Input
+2 2
+Output
+1

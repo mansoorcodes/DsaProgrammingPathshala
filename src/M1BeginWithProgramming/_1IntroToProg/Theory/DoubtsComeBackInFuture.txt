@@ -1,0 +1,33 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a = 10;
+    int res = ++a * a++;
+    printf("1st thing is: %d\n", res); // 132
+    
+    a = 10;
+    res = a++ * ++a;
+    printf("2nd thing is: %d", res);  // 120
+
+    return 0;
+}
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int a = 10;
+        int res = ++a * a++;
+        System.out.println(res +"\n"); // 121
+        
+        a = 10;
+        res = a++ * ++a;
+        System.out.println(res);	  // 120
+    }
+}
+
+// in both languages its working differently check why?
+// also check the PRECEDENCE and ASSOCIATIVITY of a++ and ++a and how do they behave????
