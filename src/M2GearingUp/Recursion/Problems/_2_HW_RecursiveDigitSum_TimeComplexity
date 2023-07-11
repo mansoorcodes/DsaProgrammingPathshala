@@ -1,0 +1,43 @@
+// This is my approach
+// T C :   O(n*log(temp)*log(temp))
+// S C : O(1)
+// Have i calculated TC & SC right or not ??
+int sumDigit(int& temp)
+{
+if(temp<10)
+return temp;
+int sum=0;
+while(temp!=0)
+{
+int rem=temp%10;
+sum+=rem;
+temp/=10;
+}
+return sumDigit(sum);
+}
+int superDigit(string n, int k) {
+int sum=0;
+for(int i=0;i<n.size();i++)
+{
+int temp=(n[i]-'0')*k;
+sum+=sumDigit(temp);
+}
+sum=sumDigit(sum);
+return sum;
+}
+
+
+// In function sumDigit we calculate sum of digits till my sum of digits become single digit.
+for example :-1. number = 716274 -> 71627 -> 7162 -> 716 -> 71 -> 7 -> 0
+sum =           4       +         7        +       2       +  6     +    1   +  7  =  27
+2. Number =   27   ->   2  ->   0
+sum         =   7     +    2    =   9
+So if we observe, at every step my  number is  number/10.
+And if we observe one step before final step,  =  number/(10^k) = 1
+so, number=  10^k
+so, K=log(number)
+At every recursive call,  log(num) + log(num) + ...................
+So, TC is log(num)*log(num).
+Is anything please explain me??
+
+Yes BRO You are correct!!!...

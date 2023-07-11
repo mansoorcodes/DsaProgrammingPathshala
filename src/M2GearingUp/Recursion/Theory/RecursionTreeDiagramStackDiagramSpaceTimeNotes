@@ -1,0 +1,11 @@
+Let say we are calling this function for x where x <= 3 then the height of the recursive tree
+will be 3 - x + 1 and in every function call we are invoking 2 more functions
+and we are taking O(1) time for every function call so an upper bound
+on time complexity can be 2 ^ (3 - x).
+
+******* SC *******
+
+Space complexity will be O(3 - x) as that can be the max height if x <= 3
+so we can also say O(max(0, 3 - x))
+if x <= 3 then 3 - x will be >= 0
+else 0 >= 3 - x

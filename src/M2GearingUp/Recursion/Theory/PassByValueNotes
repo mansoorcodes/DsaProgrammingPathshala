@@ -1,0 +1,64 @@
+1) *** https://www.geeksforgeeks.org/g-fact-31-java-is-strictly-pass-by-value/
+
+can make an array of size 1 for such primitive datatypes and can use it as a single variable
+or you can declare a global variable.
+
+
+2)  ***** Pass by value ans Ref in Java Articles *****
+Both pass by value and reference are necessary for different kinds of problems of recursion.
+
+In Java, primitives (like int, boolean,etc.) are always passed by values.
+But, list are pass by reference (It is called pass by reference copy -
+but essentially works as pass by reference).
+
+But, there are ways to pass primitives as pass by reference
+https://stackoverflow.com/questions/4319537/how-do-i-pass-a-primitive-data-type-by-reference/4319581#4319581
+
+Also, there are ways to pass complex objects by value by creating a copy and passing the copy
+https://stackoverflow.com/questions/15778645/passing-arraylist-as-value-only-and-not-reference
+
+
+3)  ***** Behaviour of Wrapper Classes *****
+public class PassByValue {
+    public static void main(String[] args) {
+      Integer a = 2;
+      Integer b = 3;
+      add(a,b);
+      System.out.println("Result from main: " +(a+b));
+    }
+    private static void add(Integer a, Integer b){
+      a = 10;
+      System.out.println("Result from method: " +(a+b));
+    }
+   }
+
+So in java can we do pass by reference like this here I used wrapper class
+to make primitive values into objects so that I can pass reference of it .
+So is this a correct way if not why and please tell me the correct way.
+
+public class PassByValue {
+  public static void main(String[] args) {
+    int a =2;
+    Integer m = a;
+    int b=3;
+    Integer n = b;
+    add(m,n);
+    System.out.println("Result from main: " +(m+n));
+  }
+  private static void add(Integer m, Integer n){
+    m = 10;
+    System.out.println("Result from method: " +(m+n));
+  }
+}
+This is also not working for pass by reference for the primitive values.
+
+But sir when I'm trying to run this code in online compiler then these lines Result from main:
+" +(m+n) is giving 5 and Result from method: " +(m+n) is giving 13.
+If m and n(Integer wrapper class)  is really passed by reference in my code then
+it should have given 13 and 13 in both cases.
+
+Bharat:
+Integer is in fact immutable. You would need to wrap it in your own custom class and
+then change it via: obj.m = new Integer(10) and it will work
+Read this:
+https://stackoverflow.com/questions/3330864/how-can-i-pass-an-integer-class-correctly-by-reference

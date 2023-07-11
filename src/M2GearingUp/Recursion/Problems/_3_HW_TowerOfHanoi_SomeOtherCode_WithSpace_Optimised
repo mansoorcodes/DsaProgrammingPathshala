@@ -1,0 +1,22 @@
+Note that many of solutions I see in comments section does not satisfy
+Space complexity of O(1) (ignoring recursion stack)
+
+Below solution is space optimised as well as recursion tree growth stops
+when ans is got (i.e. n-th move) . No need of full recursion tree.
+
+
+class Solution:
+    def shiftPile(self, N, n):
+        ans = []
+        def util(N,a,b,c):
+            global n
+            if len(ans) != 0 or N == 0:
+                return
+            util(N-1,a,c,b)
+            if n == 1:
+                ans.extend([str(a),str(c)])
+                return
+            n = n - 1
+            util(N-1,b,a,c)
+        util(N,1,2,3)
+        return ans
